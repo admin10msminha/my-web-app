@@ -1,0 +1,5 @@
+{
+  "name": "AI Video Storyboard Generator",
+  "description": "A tool that uses AI to generate a visual storyboard and narrative script from a text prompt. It approximates text-to-video by creating sequential scenes with corresponding narration, which can be read aloud using browser text-to-speech.",
+  "requestFramePermissions": []
+}
