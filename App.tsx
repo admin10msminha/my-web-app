@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect, useCallback } from 'react';
 import jsPDF from 'jspdf';
 import html2canvas from 'html2canvas';
@@ -8,7 +7,7 @@ import { Loader } from './components/Loader';
 import { ErrorMessage } from './components/ErrorMessage';
 import { StoryData, StoryboardPanelData } from './types';
 import { generateStoryScript, generateImage, AuthError } from './services/geminiService';
-import { renderVideo } from './services/videoService';
+import { renderVideo } from './services/videoService.ts';
 import { uiStrings } from './i18n';
 import { SettingsControls } from './components/SettingsControls';
 import { DownloadIcon } from './components/icons/DownloadIcon';
