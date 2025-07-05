@@ -32,10 +32,6 @@ export const App = (): React.ReactNode => {
 
   const strings = uiStrings.en;
 
-  if (authFailedMessage) {
-    return <ConfigurationError message={authFailedMessage} />;
-  }
-
   useEffect(() => {
     const synth = window.speechSynthesis;
     const loadVoices = () => {
@@ -218,6 +214,11 @@ export const App = (): React.ReactNode => {
   };
 
   const allImagesLoaded = storyData && storyData.scenes.every(p => p.imageUrl);
+
+  // Move the conditional return AFTER all hooks have been called
+  if (authFailedMessage) {
+    return <ConfigurationError message={authFailedMessage} />;
+  }
 
   return (
     <div className="min-h-screen bg-dark-100 text-dark-content font-sans">
